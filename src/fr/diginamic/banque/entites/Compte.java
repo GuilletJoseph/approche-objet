@@ -1,15 +1,13 @@
 package fr.diginamic.banque.entites;
 
 public class Compte {
- private int numeroCompte;
- private int soldeCompte;
+ protected int numeroCompte;
+ protected int soldeCompte;
  private Compte cmtp;
 public Compte() {
 	super();
 	// TODO Auto-generated constructor stub
 }
-
-
 
 public Compte(int numeroCompte, int soldeCompte) {
 	super();
@@ -18,7 +16,21 @@ public Compte(int numeroCompte, int soldeCompte) {
 }
  
 
+public int getNumeroCompte() {
+	return numeroCompte;
+}
 
+public void setNumeroCompte(int numeroCompte) {
+	this.numeroCompte = numeroCompte;
+}
+
+public int getSoldeCompte() {
+	return soldeCompte;
+}
+
+public void setSoldeCompte(int soldeCompte) {
+	this.soldeCompte = soldeCompte;
+}
 
 public void Affiche() {
 	 System.out.println(numeroCompte +" "+soldeCompte);	 
