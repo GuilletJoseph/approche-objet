@@ -17,13 +17,13 @@ public class TestTheatre {
 		Scanner scanner = new Scanner(System.in) ;	
 		
 		do {
-			System.out.println("Ajouter nb person");
-			int np = scanner.nextInt();	
+			System.out.println("Ajouter nombre des personnes");
+			th.setNbPersonne(scanner.nextInt());	
 			System.out.println("Ajouter prix");
-			int pr = scanner.nextInt();	
-			th.inscrire(np, pr);			
-		}while(th.getCombReste()>=0);	
-		
+			th.setPrix(scanner.nextInt());	
+			th.inscrire();
+		}while(th.getCombReste()>0);	
+		th.affichePlein();
 		scanner.close(); 
 		}
 	}

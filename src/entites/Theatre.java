@@ -8,7 +8,9 @@ public class Theatre {
 	private int capacite;
 	private int totalClientIns;
 	private int recetteTotale;
-	
+	private int nbPersonne;
+	private int prix;
+	private int combReste;
 	
 	
 	
@@ -22,64 +24,58 @@ public class Theatre {
 		this.nom = nom;
 		this.capacite = capacite;
 	}
-
-	public String getNom() {
-		return nom;
+	
+	
+	public int getNbPersonne() {
+		return nbPersonne;
 	}
 
-	public void setNom(String nom) {
-		this.nom = nom;
+	public void setNbPersonne(int nbPersonne) {
+		this.nbPersonne = nbPersonne;
 	}
 
-	public int getCapacite() {
-		return capacite;
+	public int getPrix() {
+		return prix;
 	}
 
-	public void setCapacite(int capacite) {
-		this.capacite = capacite;
+	public void setPrix(int prix) {
+		this.prix = prix;
 	}
 
-	public int getTotalClientIns() {
-		return totalClientIns;
-	}
-
-	public void setTotalClientIns(int totalClientIns) {
-		this.totalClientIns = totalClientIns;
-	}
-
-	public int getRecetteTotale() {
-		return recetteTotale;
-	}
-
-	public void setRecetteTotale(int recetteTotale) {
-		this.recetteTotale = recetteTotale;
+	
+	
+	public void setCombReste(int combReste ) {
+		this.combReste=combReste;
 	}
 	
 	public int getCombReste() {
 		return capacite-totalClientIns;
 	}
 	public void affiche() {
-		System.out.println(nom+capacite);
+		System.out.println(nom + " "+capacite+" persone");
+		
+		
+	}
+	public void affichePlein() {
+		
+		System.out.println("Le teatre "+ nom +" est plein");
+		
+	}
+	
+	
+	public void inscrire() {
+		recetteTotale=recetteTotale+(prix*nbPersonne);
+		totalClientIns=totalClientIns+nbPersonne;
+		this.combReste=capacite-totalClientIns;
+		System.out.println("total clients incrits "+totalClientIns+" recette totale "+recetteTotale+" euros");
+		System.out.println("Il reste des "+ combReste+" Ajouter:");
 		
 		
 	}
 	
 	
 	
-	public void inscrire(int nbIns, int prix) {
-		recetteTotale=recetteTotale+(prix*nbIns);
-		totalClientIns=totalClientIns+nbIns;
-		int restPl=capacite-totalClientIns;
-		System.out.println("total clients incrits "+totalClientIns+" recette totale "+recetteTotale);
-		System.out.println("Il reste des "+ restPl+"Ajoutez:");
-		//System.out.println("Le teatre "+ nom +" est plein");
-		
-	}
-	
-	
-	
 	
 	}
 	
 	
-}
