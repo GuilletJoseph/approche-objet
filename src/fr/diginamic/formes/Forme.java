@@ -1,5 +1,7 @@
 package fr.diginamic.formes;
 
-public class Forme {
+public  abstract class Forme {
+	public abstract double calculerSurface();
+	public abstract double calculerPerimetre();
 
 }
