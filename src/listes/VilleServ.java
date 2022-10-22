@@ -60,11 +60,7 @@ public class VilleServ {
 			
 			for (int i=0; i<liste1.size(); i++) {
 				System.out.println(liste1.get(i).getNom() +" "+ liste1.get(i).getNbHabit());	
-				}	
-			
-			
+				}				
 		}
-	
-	
 
 }
