@@ -3,6 +3,8 @@ package listes;
 import java.util.ArrayList;
 import java.util.List;
 
+import fr.diginamic.testenumeration.Continent;
+
 public class Ville implements Comparable<Ville> {
 
 	
@@ -10,12 +12,14 @@ public class Ville implements Comparable<Ville> {
 	
 private String nom;
 private int nbHabit;
+private Continent continent;
 
 
-public Ville(String nom, int nbHabit) {
+public Ville(String nom, int nbHabit, Continent continent) {
 	super();
 	this.setNom(nom);
 	this.setNbHabit(nbHabit);
+	this.continent=continent;
 	
 }
 
@@ -39,6 +43,15 @@ public void setNom(String nom) {
 	this.nom = nom;
 }
 
+
+
+public Continent getContinent() {
+    return continent;
+}
+
+public void setContinent(Continent continent) {
+    this.continent = continent;
+}
 
 @Override
 public int compareTo(Ville o) {
