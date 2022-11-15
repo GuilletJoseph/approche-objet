@@ -15,6 +15,12 @@ private int nbHabit;
 private Continent continent;
 
 
+public Ville() {
+    super();
+    // TODO Auto-generated constructor stub
+}
+
+
 public Ville(String nom, int nbHabit, Continent continent) {
 	super();
 	this.setNom(nom);
