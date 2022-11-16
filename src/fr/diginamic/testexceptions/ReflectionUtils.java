@@ -20,14 +20,9 @@ public class ReflectionUtils {
     field.setAccessible(true);
     if (field.get(obj)== null) {
         throw new RefException("L'objet doit etre not null"); 
-    }
+    }else 
     System.out.println("La valeur de l'attribut " + field.getName() + " est " +
     field.get(obj).toString());
-    
-    
-    
-    
-    
     }
     }
 }
